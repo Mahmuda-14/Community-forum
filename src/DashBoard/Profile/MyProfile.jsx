@@ -4,9 +4,8 @@ import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { FaRegEdit } from "react-icons/fa";
 
-// import axios from "axios";
+
 import { FaRegComment } from "react-icons/fa";
 
 
@@ -51,11 +50,7 @@ const MyProfile = ({ item}) => {
                             <h2>{name}</h2>
                             <p>Posted on {formatDate(time)}</p>
                         </div>
-                        <div className="ml-[31.7rem]">
-                            <button  className="btn btn-sm btn-ghost text-2xl">
-                                <Link><FaRegEdit></FaRegEdit></Link>
-                            </button>
-                        </div>
+                       
                     </div>
                 </div>
                 <div className="card-body">

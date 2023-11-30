@@ -2,7 +2,7 @@
 
 
 const AllComment = ({ item }) => {
-    // eslint-disable-next-line react/prop-types
+  
     const { comment, title, email } = item;
 
     return (

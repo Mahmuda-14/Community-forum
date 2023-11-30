@@ -1,8 +1,5 @@
 
 
-
-// import sign from '../../assets/assets/others/authentication2.png'
-
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";

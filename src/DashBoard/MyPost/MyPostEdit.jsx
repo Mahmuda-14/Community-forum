@@ -2,13 +2,10 @@
 /* eslint-disable react/prop-types */
 import { AiFillLike } from "react-icons/ai";
 import { AiFillDislike } from "react-icons/ai";
-// import { FaRegComment } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-
-// import axios from "axios";
 import { FaRegComment } from "react-icons/fa";
 
 
@@ -17,7 +14,7 @@ const MyPostEdit = ({ item}) => {
     const { _id, name, title, picture, tags, time, upvote, downvote } = item;
     const total = upvote + downvote;
 
-    // const [bookings, setBookings] = useState([]);
+ 
     const [comment, setComment] = useState([]);
     const [remaining, setRemaining] = useState([]);
    

@@ -1,6 +1,5 @@
 
 import { useQuery } from "@tanstack/react-query";
-// import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import {  FaUsers } from "react-icons/fa";
 import { BiSolidBadgeCheck } from "react-icons/bi"
 import Swal from "sweetalert2";
