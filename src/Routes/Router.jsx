@@ -16,6 +16,7 @@ import Report from "../DashBoard/Admin/Report";
 import Announcement from "../DashBoard/Admin/Announcement";
 import Notification from "../Pages/Home/Notification/Notification";
 import Comment from "../DashBoard/MyPost/Comment";
+import AdminRoute from "../Routes/AdminRoute"
 
 
 
@@ -56,6 +57,8 @@ export const router = createBrowserRouter([
       {
         path: '/signup',
         element: <SignUp></SignUp>
+      
+        
 
       },
 
@@ -84,7 +87,7 @@ export const router = createBrowserRouter([
       // admin
       {
         path:"admin",
-        element:<AdminHome></AdminHome>
+        element:<AdminRoute><AdminHome></AdminHome></AdminRoute>
       },
       {
         path:"all",
