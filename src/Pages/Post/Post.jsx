@@ -3,6 +3,7 @@ import SinglePost from "./SinglePost";
 
 const Post = () => {
   const [post, setPost] = useState([]);
+  
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -24,6 +25,9 @@ const Post = () => {
 
       });
   }, []);
+
+
+
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);

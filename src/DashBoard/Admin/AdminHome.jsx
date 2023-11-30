@@ -5,8 +5,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const AdminHome = () => {
 
   const { user } = useContext(AuthContext);
-  const userEmail = user?.email;
-  console.log(userEmail);
+
+  // console.log(userEmail);
   const photo = user?.photoURL;
 
   const [postCount, setPostCount] = useState(0);
@@ -21,7 +21,7 @@ const AdminHome = () => {
     fetch('https://community-forum-ass-12-server.vercel.app/post')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         setPostCount(data);
 
       })
@@ -35,7 +35,7 @@ const AdminHome = () => {
     fetch('https://community-forum-ass-12-server.vercel.app/comment')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         setCommentCount(data);
 
       })
@@ -49,7 +49,7 @@ const AdminHome = () => {
     fetch('https://community-forum-ass-12-server.vercel.app/users')
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         setUserCount(data);
 
       })

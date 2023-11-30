@@ -15,7 +15,7 @@ const MyProfile = ({ item}) => {
     const { _id, name, title, picture, tags, time, upvote, downvote } = item;
     const total = upvote + downvote;
 
-    // const [bookings, setBookings] = useState([]);
+   
     const [comment, setComment] = useState([]);
    
    
