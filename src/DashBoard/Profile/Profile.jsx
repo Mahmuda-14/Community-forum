@@ -40,9 +40,9 @@ const Profile = () => {
       <div>
         <div className="card w-full">
           <div className="">
-            <img className="ml-[18rem] w-40 h-40 rounded-full" src={photo} alt="" />
+            <img className="lg:ml-[18rem] w-40 h-40 rounded-full" src={photo} alt="" />
             <div className="flex">
-              <h2 className="mt-11 ml-[18rem] font-bold">{user?.displayName}</h2>
+              <h2 className="mt-11 lg:ml-[18rem] font-bold">{user?.displayName}</h2>
               {hasBronzeBadge && (
                 <h2 className="text-red-900 text-4xl mt-9">
                   <LuBadgeCheck />
@@ -51,7 +51,7 @@ const Profile = () => {
             </div>
           </div>
           <div className="">
-            <h2 className="gap-5 ml-[287px] font-bold">
+            <h2 className="gap-5 lg:ml-[287px] font-bold">
               <>Email : {user?.email}</>
             </h2>
     

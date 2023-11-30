@@ -61,15 +61,15 @@ const SignUp = () => {
     return (
         <>
            
-            <h1 className="text-5xl font-bold m-11 text-center">Sign up now!</h1>
+            
             <div className=" hero flex flex-row mt-[26px] mb-16">
                 
                     <div className="w-1/2">
                         <img className="" src={bg} alt="" />                   
                     </div>
 
-                    <div className="w-[24rem] h-[39rem] border-4 border-y-teal-700 shadow-2xl bg-base-100">
-
+                    <div className="w-[24rem] h-[41rem] my-11 border-4 border-y-teal-700 shadow-2xl bg-base-100">
+                    <h1 className="text-4xl font-semibold text-center mt-1">Sign-Up </h1>
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
                             {/* name */}
@@ -149,7 +149,7 @@ const SignUp = () => {
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
-                        <p className=' text-center p-'><small>New Here? <Link className=' underline text-blue-600' to="/login">Login</Link></small></p>
+                        <p className=' text-center'><small>New Here? <Link className=' underline text-blue-600' to="/login">Login</Link></small></p>
                     </div>
                 </div>
         

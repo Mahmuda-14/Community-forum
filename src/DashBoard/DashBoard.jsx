@@ -18,7 +18,7 @@ const DashBoard = () => {
 
     return (
         
-        <div className="flex m-11">
+        <div className="lg:flex m-11">
 
             {/* dashboard side bar */}
             <div className="w-64 h-[30rem] mt-[67px] bg-teal-100 border-y-4 border-y-teal-700">
@@ -56,11 +56,7 @@ const DashBoard = () => {
                             :
 
                             (<>
-                                <li>
-                                    <NavLink to="/">
-                                        <FaHome></FaHome>
-                                        Home</NavLink>
-                                </li>
+                               
                                 <li>
                                     <NavLink to="/dashboard/profile">
                                         <CgProfile></CgProfile>
