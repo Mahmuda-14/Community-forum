@@ -1,6 +1,51 @@
-.featured-item {
+/* .featured-item {
 
     background: linear-gradient(0deg, rgba(122, 151, 145, 0.7) 0%, rgba(43, 58, 55, 0.7) 100%), url('/src/assets/back.jpg'), lightgray 90% / cover no-repeat;;
 
     background-attachment: fixed;
-}
+    background-video: ;
+} */
+
+
+/* Banner.css */
+
+.video-background {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the video behind other content */
+  }
+  
+  /* Style the search bar */
+  .search-bar {
+    position: relative;
+    z-index: 1; /* Place the search bar above the video */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #fff; /* Adjust the border color */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color and opacity */
+    color: #333; /* Adjust the text color */
+    width: 200px; /* Adjust the width as needed */
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #30999d; /* Adjust the button color */
+    color: #fff; /* Adjust the button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
+  
+  /* Add additional styles as needed for other elements in your banner */
+  

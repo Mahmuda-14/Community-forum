@@ -14,6 +14,9 @@ import AllUser from "../DashBoard/Admin/AllUser";
 import AdminHome from "../DashBoard/Admin/AdminHome";
 import Report from "../DashBoard/Admin/Report";
 import Announcement from "../DashBoard/Admin/Announcement";
+import Notification from "../Pages/Home/Notification/Notification";
+import Comment from "../DashBoard/MyPost/Comment";
+
 
 
 
@@ -34,9 +37,18 @@ export const router = createBrowserRouter([
 
       },
       {
+        path: '/notification',
+        element: <Notification></Notification>
+      },
+     {
         path: '/membership',
         element: <MemberShip></MemberShip>
       },
+      {
+         path: '/comments/:title',
+         element: <Comment></Comment>
+       }
+      ,
       {
         path: '/login',
         element: <Login></Login>
@@ -55,7 +67,8 @@ export const router = createBrowserRouter([
     children:[
       {
         path:"profile",
-        element:<Profile></Profile>
+        element:<Profile></Profile>,
+        loader: () => fetch('http://localhost:5000/post')
       },
       {
         path:"add",

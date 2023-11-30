@@ -1,23 +1,82 @@
 [
-    { "id": 1, "name": "Technology", "tag": "technology" },
-    { "id": 2, "name": "Programming", "tag": "programming" },
-    { "id": 3, "name": "Web Development", "tag": "web-development" },
-    { "id": 4, "name": "Design", "tag": "design" },
-    { "id": 5, "name": "JavaScript", "tag": "javascript" },
-    { "id": 6, "name": "React", "tag": "react" },
-    { "id": 7, "name": "Python", "tag": "python" },
-    { "id": 8, "name": "Java", "tag": "java" },
-    { "id": 9, "name": "Data Science", "tag": "data-science" },
-    { "id": 10, "name": "Machine Learning", "tag": "machine-learning" },
-    { "id": 11, "name": "Artificial Intelligence", "tag": "artificial-intelligence" },
-    { "id": 12, "name": "Mobile Development", "tag": "mobile-development" },
-    { "id": 13, "name": "UI/UX", "tag": "ui-ux" },
-    { "id": 14, "name": "Cybersecurity", "tag": "cybersecurity" },
-    { "id": 15, "name": "Blockchain", "tag": "blockchain" },
-    { "id": 16, "name": "Cloud Computing", "tag": "cloud-computing" },
-    { "id": 17, "name": "DevOps", "tag": "devops" },
-    { "id": 18, "name": "Open Source", "tag": "open-source" },
-    { "id": 19, "name": "Startups", "tag": "startups" },
-    { "id": 20, "name": "Digital Marketing", "tag": "digital-marketing" }
-  ]
-  
+  {
+    "name": "Technology",
+    "tags": "technology"
+  },
+  {
+    "name": "Programming",
+    "tags": "programming"
+  },
+  {
+    "name": "Web Development",
+    "tags": "web-development"
+  },
+  {
+    "name": "Design",
+    "tags": "design"
+  },
+  {
+    "name": "JavaScript",
+    "tags": "javascript"
+  },
+  {
+    "name": "React",
+    "tags": "react"
+  },
+  {
+    "name": "Python",
+    "tags": "python"
+  },
+  {
+    "name": "Java",
+    "tags": "java"
+  },
+  {
+    "name": "Data Science",
+    "tags": "data-science"
+  },
+  {
+    "name": "Machine Learning",
+    "tags": "machine-learning"
+  },
+  {
+    "name": "Artificial Intelligence",
+    "tags": "artificial-intelligence"
+  },
+  {
+    "name": "Mobile Development",
+    "tags": "mobile-development"
+  },
+  {
+    "name": "UI/UX",
+    "tags": "ui-ux"
+  },
+  {
+    "name": "Cybersecurity",
+    "tags": "cybersecurity"
+  },
+  {
+    "name": "Blockchain",
+    "tags": "blockchain"
+  },
+  {
+    "name": "Cloud Computing",
+    "tags": "cloud-computing"
+  },
+  {
+    "name": "DevOps",
+    "tags": "devops"
+  },
+  {
+    "name": "Open Source",
+    "tags": "open-source"
+  },
+  {
+    "name": "Startups",
+    "tags": "startups"
+  },
+  {
+    "name": "Digital Marketing",
+    "tags": "digital-marketing"
+  }
+]

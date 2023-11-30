@@ -4,7 +4,8 @@ import { useForm } from "react-hook-form";
 import { MdDownloadDone } from "react-icons/md";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
-import {  useLoaderData, useParams } from "react-router-dom";
+import {  Link, useLoaderData, useParams } from "react-router-dom";
+import bg from '../../../src/assets/back.webp'
 
 const Add = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -31,13 +32,6 @@ const Add = () => {
 
 
 
-
-
-
-    // const handleBecomeMemberClick = () => {
-    //     <Navigate to="/"></Navigate>
-    // };
-
     const onSubmit = async (data) => {
         const menuItem = {
             name: data.name,
@@ -48,7 +42,7 @@ const Add = () => {
             description: data.description,
             upvote: parseFloat(data.upvote),
             downvote: parseFloat(data.downvote),
-            picture: data.display_url
+            picture: data.picture
             // picture: data.user?.photoURL
         }
 
@@ -71,6 +65,7 @@ const Add = () => {
                         showConfirmButton: false,
                         timer: 1500,
                     });
+                   
                 }
             });
     };
@@ -83,9 +78,10 @@ const Add = () => {
 
         <div>
             {filteredServices.length >= maxPostCount ? (
-                <div>
+                <div className=" ml-[21.5rem]">
+                    <img  src={bg} alt="" />
                     <p>Sorry, you have exceeded the post limit.</p>
-                    <button className="btn">Become a Member</button>
+                    <Link to="/membership"><button className="btn btn-outline btn-success text-white mt-7 ml-9 rounded-3xl">Become a Member</button></Link> 
                 </div>
             ) :
                 (
@@ -124,7 +120,8 @@ const Add = () => {
                             </div>
                             <div className="form-control w-1/2 mt-[36px] ml-3">
                                 <input {...register('picture', { required: true })}
-                                    type="file" className="file-input input-bordered w-full" />
+                                placeholder="Put image here..."
+                                 className="input input-bordered w-full" />
                             </div>
                         </div>
 
@@ -152,9 +149,9 @@ const Add = () => {
                                     className="select select-bordered w-full">
                                     <option disabled value="default">Select a tag</option>
                                     <option value="#Technology"> #Technology</option>
-                                    <option value="Programming"> #Programming</option>
-                                    <option value="Web Development"> #Web Development</option>
-                                    <option value="Design"> #Design</option>
+                                    <option value="#Programming"> #Programming</option>
+                                    <option value="#Web Development"> #Web Development</option>
+                                    <option value="#Design"> #Design</option>
 
 
                                 </select>
@@ -200,10 +197,11 @@ const Add = () => {
                             <textarea {...register('description')} className="textarea textarea-bordered h-24" placeholder="Post Description"></textarea>
                         </div>
 
-                        <button className="btn bg-teal-600 text-white my-11 ml-[23rem]">
-                            Add Item <MdDownloadDone className="ml-4 text-white font-2xl"></MdDownloadDone>
+                        <button className="btn bg-teal-600 text-white my-11 ml-[23rem]">Add Post<MdDownloadDone className="ml-4 text-white text-3xl"></MdDownloadDone>
                         </button>
+                       
                     </form>
+                    
                 )
             }
 

@@ -6,7 +6,7 @@ const Tag = () => {
   // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('Tag.json')
+    fetch('http://localhost:5000/tag')
       .then(res => res.json())
       .then(data => {
         setTags(data);
@@ -17,10 +17,10 @@ const Tag = () => {
        
       });
   }, []);
-  const displayedTags = tags.slice(0, 5);
+  const displayedTags = tags.slice(0, 10);
 
   return (
-    <section className="bg-gray-200 p-8 text-left h-auto">
+    <section className="bg-gray-200 rounded-xl p-8 text-left h-auto border-2 border-y-teal-600">
       <h2 className=" text-lg font-semibold ">My Tags</h2>
       <ul className="list-none p-0">
 

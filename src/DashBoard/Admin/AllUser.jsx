@@ -1,7 +1,8 @@
 
 import { useQuery } from "@tanstack/react-query";
 // import useAxiosSecure from "../../../hooks/useAxiosSecure";
-import { FaTrashAlt, FaUsers } from "react-icons/fa";
+import {  FaUsers } from "react-icons/fa";
+import { BiSolidBadgeCheck } from "react-icons/bi"
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
@@ -35,11 +36,7 @@ const AllUser = () => {
 
     return (
         <div>
-            <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl">All Users</h2>
-                <h2 className="text-3xl">Total Users: {users.length}</h2>
-            </div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mt-16 border-4 border-y-teal-900">
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>
@@ -60,16 +57,17 @@ const AllUser = () => {
                                 <td>
                                     { user.role === 'admin' ? 'Admin' : <button
                                         onClick={() => handleMakeAdmin(user)}
-                                        className="btn btn-lg bg-orange-500">
+                                        className="btn btn-sm bg-teal-500">
                                         <FaUsers className="text-white 
-                                        text-2xl"></FaUsers>
+                                        text-xl"></FaUsers>
                                     </button>}
                                 </td>
                                 <td>
                                     <button
                                       
-                                        className="btn btn-ghost btn-lg">
-                                        <FaTrashAlt className="text-red-600"></FaTrashAlt>
+                                        className="btn btn-ghost btn-sm">
+                                            <BiSolidBadgeCheck  className=" text-amber-800 text-2xl"></BiSolidBadgeCheck>
+                                       
                                     </button>
                                 </td>
                             </tr>)

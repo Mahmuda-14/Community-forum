@@ -1,24 +1,116 @@
-import './Banner.css'
+/* eslint-disable react/prop-types */
+// import { useEffect, useState } from 'react';
+// import './Banner.css';
+// import bg from '../../assets/cover-v2-1.mp4'
 
-const Banner = () => {
+
+// const Banner = ({ onSearch }) => {
+//     const [searchTerm, setSearchTerm] = useState('');
+//     // const [searchResults, setSearchResults] = useState([]);
+
+//     const handleSearch = () => {
+//         onSearch(searchTerm);
+
+//     };
+
+//     useEffect(()=>{
+//         fetch(`http://localhost:5000/tag/${tag}`)
+//     },[])
+
+//     return (
+//         <div className="flex justify-center items-center py-20 px-36  text-white h-[20.5rem] rounded-2xl mt-4">
+
+
+//             <video autoPlay loop muted playsInline className='video-background'>
+//                 <source src={bg} type="video/webm" />
+
+//                 Your browser does not support the video tag.
+//             </video>
+
+
+
+//             <div className="search-bar ">
+//                 <input
+//                     className='search-bar input'
+//                     type="text"
+//                     placeholder="Search for images..."
+//                     value={searchTerm}
+//                     onChange={(e) => setSearchTerm(e.target.value)}
+//                 />
+//                 <button className='search-bar button' onClick={handleSearch}>Search</button>
+//                 {/* <SearchComponent onSearch={handleSearch} />
+//                 <SearchResult results={searchResults} /> */}
+//             </div>
+//         </div>
+
+//     );
+// };
+
+// export default Banner;
+
+
+
+
+
+
+
+import { useEffect, useState } from 'react';
+import './Banner.css';
+import bg from '../../assets/cover-v2-1.mp4';
+
+const Banner = ({ setSearchResults }) => {
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleSearch = async () => {
+        try {
+            console.log('Searching with term:', searchTerm);
+
+            const response = await fetch(`http://localhost:5000/tag/${searchTerm}`);
+            if (response.ok) {
+                const data = await response.json();
+                console.log('Search results:', data);
+                setSearchResults(data);
+            } else {
+                console.error(`Error: ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    useEffect(() => {
+        if (searchTerm) {
+            // Fetch search results based on the search term
+            handleSearch();
+        }
+    }, [searchTerm]);
+
     return (
-        <div className="flex justify-center items-center py-20 px-36 featured-item text-white h-[20.5rem] rounded-2xl mt-4">
-            <div className="join">
-       
-                        <div>
-                            <input className="input input-bordered join-item" placeholder="Search" />
-                            
-                        </div>
+        <div className="flex justify-center items-center py-20 px-36  text-white h-[20.5rem] rounded-2xl mt-4">
+            <video autoPlay loop muted playsInline className='video-background'>
+                <source src={bg} type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
 
-                        <div className="indicator">
+            <div className="search-bar">
+                <input
+                    className='search-bar input'
+                    type="text"
+                    placeholder="Search for images..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <button className='search-bar button' onClick={handleSearch}>
+                    Search
+                </button>
+            </div>
 
-                            <button className="btn join-item">Search</button>
-                        </div>
-                        <input type="search" name="" id="" />
-                    </div>
-                </div>
+            {/* Display search results, for example: */}
+            <div>
+                {/* You can customize how you display the search results here */}
+            </div>
+        </div>
     );
 };
 
 export default Banner;
-
