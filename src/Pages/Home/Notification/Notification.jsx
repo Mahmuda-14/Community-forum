@@ -7,7 +7,7 @@ const Notification = () => {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/news')
+    fetch('https://community-forum-ass-12-server.vercel.app/news')
       .then(res => res.json())
       .then(data => {
         setPost(data);

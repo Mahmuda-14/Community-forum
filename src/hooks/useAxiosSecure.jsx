@@ -4,7 +4,7 @@ import axios from "axios";
 // import { AuthContext } from "../Provider/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://community-forum-ass-12-server.vercel.app'
 })
 const useAxiosSecure = () => {
     // const navigate = useNavigate();

@@ -13,7 +13,7 @@ const Post = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/post')
+    fetch('https://community-forum-ass-12-server.vercel.app/post')
       .then(res => res.json())
       .then(data => {
         setPost(data);

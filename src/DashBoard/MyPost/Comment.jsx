@@ -10,7 +10,7 @@ const Comment = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/comment/${title}`)
+        fetch(`https://community-forum-ass-12-server.vercel.app/comment/${title}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -42,7 +42,7 @@ const Comment = () => {
         console.log('Reporting comment with ID', id, item);
 
 
-        fetch('http://localhost:5000/feedback', {
+        fetch('https://community-forum-ass-12-server.vercel.app/feedback', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

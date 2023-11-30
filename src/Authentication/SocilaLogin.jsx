@@ -27,12 +27,12 @@ const SocialLogin = () => {
     }
 
     return (
-        <div className="p-8">
-            <div className="divider"></div>
+        <div className=" pl-[6rem] pr-8 pb-2">
+           
             <div>
-                <button onClick={handleGoogleSignIn} className="btn">
-                    <FaGoogle className="mr-2"></FaGoogle>
-                    Google
+                <button onClick={handleGoogleSignIn} className="btn btn-outline border-2 border-teal-600">
+                   Join Us with <FaGoogle className="mr-2 text-xl text-teal-700 "></FaGoogle>
+                   
                 </button>
             </div>
         </div>

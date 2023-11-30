@@ -31,7 +31,7 @@ const Announcement = () => {
 
         // send data to the server
 
-        fetch('http://localhost:5000/news', {
+        fetch('https://community-forum-ass-12-server.vercel.app/news', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

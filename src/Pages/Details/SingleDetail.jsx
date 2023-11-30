@@ -62,7 +62,7 @@ const SingleDetail = ({ detail }) => {
         console.log(submissionData);
 
 
-        fetch('http://localhost:5000/comment', {
+        fetch('https://community-forum-ass-12-server.vercel.app/comment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

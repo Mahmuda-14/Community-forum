@@ -27,7 +27,7 @@
 
 //   useEffect(() => {
 //     // Simulate fetching announcements and updating the count
-//     fetch('http://localhost:5000/news')
+//     fetch('https://community-forum-ass-12-server.vercel.app/news')
 //       .then(res => res.json())
 //       .then(data => {
 //         setAnnouncementCount(data.length);
@@ -68,7 +68,7 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/news')
+    fetch('https://community-forum-ass-12-server.vercel.app/news')
       .then(res => res.json())
       .then(data => {
         setAnnouncementCount(data.length);

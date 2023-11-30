@@ -8,7 +8,7 @@ const Report = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/feedback')
+        fetch('https://community-forum-ass-12-server.vercel.app/feedback')
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);

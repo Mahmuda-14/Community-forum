@@ -6,7 +6,7 @@ const Tag = () => {
   // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/tag')
+    fetch('https://community-forum-ass-12-server.vercel.app/tag')
       .then(res => res.json())
       .then(data => {
         setTags(data);

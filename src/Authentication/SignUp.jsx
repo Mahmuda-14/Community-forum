@@ -4,14 +4,13 @@
 // import sign from '../../assets/assets/others/authentication2.png'
 
 import { useContext } from "react";
-
 import { useForm } from "react-hook-form";
-
 import { Link, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import { AuthContext } from "../Provider/AuthProvider";
 import SocialLogin from "./SocilaLogin";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import bg from '../assets/5607.jpg'
 
 
 
@@ -62,16 +61,14 @@ const SignUp = () => {
     return (
         <>
            
-            <h1 className="text-5xl font-bold text-center">Sign up now!</h1>
-            <div className="hero min-h-screen">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-
-                    <div className="text-center lg:text-left">
-
-                        <img src="" alt="" />
+            <h1 className="text-5xl font-bold m-11 text-center">Sign up now!</h1>
+            <div className=" hero flex flex-row mt-[26px] mb-16">
+                
+                    <div className="w-1/2">
+                        <img className="" src={bg} alt="" />                   
                     </div>
 
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="w-[24rem] h-[39rem] border-4 border-y-teal-700 shadow-2xl bg-base-100">
 
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
@@ -147,15 +144,15 @@ const SignUp = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                            <div className="form-control">
+                                <input className="btn bg-teal-600 text-white" type="submit" value="Sign Up" />
                             </div>
                         </form>
                         <SocialLogin></SocialLogin>
-                        <p><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className=' text-center p-'><small>New Here? <Link className=' underline text-blue-600' to="/login">Login</Link></small></p>
                     </div>
                 </div>
-            </div>
+        
         </>
     );
 };

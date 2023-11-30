@@ -14,7 +14,7 @@
 //     };
 
 //     useEffect(()=>{
-//         fetch(`http://localhost:5000/tag/${tag}`)
+//         fetch(`https://community-forum-ass-12-server.vercel.app/tag/${tag}`)
 //     },[])
 
 //     return (
@@ -65,7 +65,7 @@ const Banner = ({ setSearchResults }) => {
         try {
             console.log('Searching with term:', searchTerm);
 
-            const response = await fetch(`http://localhost:5000/tag/${searchTerm}`);
+            const response = await fetch(`https://community-forum-ass-12-server.vercel.app/tag/${searchTerm}`);
             if (response.ok) {
                 const data = await response.json();
                 console.log('Search results:', data);

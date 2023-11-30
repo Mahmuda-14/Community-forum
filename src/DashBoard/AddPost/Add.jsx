@@ -47,7 +47,7 @@ const Add = () => {
         }
 
         console.log(menuItem)
-        fetch('http://localhost:5000/post', {
+        fetch('https://community-forum-ass-12-server.vercel.app/post', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

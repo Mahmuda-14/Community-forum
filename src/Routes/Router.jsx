@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
       {
         path:'/post/:id',
         element:<Detail></Detail>,
-        loader: ({ params })=> fetch(`http://localhost:5000/post/${params.id}`)
+        loader: ({ params })=> fetch(`https://community-forum-ass-12-server.vercel.app/post/${params.id}`)
 
       },
       {
@@ -68,17 +68,17 @@ export const router = createBrowserRouter([
       {
         path:"profile",
         element:<Profile></Profile>,
-        loader: () => fetch('http://localhost:5000/post')
+        loader: () => fetch('https://community-forum-ass-12-server.vercel.app/post')
       },
       {
         path:"add",
         element:<Add></Add>,
-        loader: () => fetch('http://localhost:5000/post')
+        loader: () => fetch('https://community-forum-ass-12-server.vercel.app/post')
       },
       {
         path:"my",
         element:<MyPost></MyPost>,
-        loader: () => fetch('http://localhost:5000/post')
+        loader: () => fetch('https://community-forum-ass-12-server.vercel.app/post')
       },
 
       // admin

@@ -25,7 +25,7 @@ const MyPostEdit = ({ item}) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/comment/${title}`)
+        fetch(`https://community-forum-ass-12-server.vercel.app/comment/${title}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -57,7 +57,7 @@ const MyPostEdit = ({ item}) => {
 
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/post/${id}`,{
+                fetch(`https://community-forum-ass-12-server.vercel.app/post/${id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())

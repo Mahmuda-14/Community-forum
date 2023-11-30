@@ -18,7 +18,7 @@ const AdminHome = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/post')
+    fetch('https://community-forum-ass-12-server.vercel.app/post')
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -32,7 +32,7 @@ const AdminHome = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5000/comment')
+    fetch('https://community-forum-ass-12-server.vercel.app/comment')
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -46,7 +46,7 @@ const AdminHome = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:5000/users')
+    fetch('https://community-forum-ass-12-server.vercel.app/users')
       .then(res => res.json())
       .then(data => {
         console.log(data);
