@@ -70,10 +70,6 @@ const NavBar = () => {
     </>
 
 
-
-
-
-
     return (
         <div>
             <div className="navbar bg-base-200 py-0 mt-4 rounded-xl">
@@ -100,10 +96,6 @@ const NavBar = () => {
 
                     </ul>
 
-
-
-                    {/* <Link to="/login" className='btn btn-outline btn-success rounded-3xl mr-2'>Login</Link>
-                    <Link to="/signup" className='btn rounded-3xl bg-teal-600 text-white'>Join US</Link> */}
 
                 </div>
             </div>

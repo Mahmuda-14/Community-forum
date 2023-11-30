@@ -1,8 +1,9 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { LuBadgeCheck } from "react-icons/lu";
-import MyPostEdit from "../MyPost/MyPostEdit";
+
 import { useLoaderData } from "react-router-dom";
+import MyProfile from "./MyProfile";
 
 
 
@@ -57,7 +58,7 @@ const Profile = () => {
     
             <div className=" mt-11">
               {displayedTags.map((item) => (
-                <MyPostEdit key={item._id} item={item}></MyPostEdit>
+                <MyProfile key={item._id} item={item}></MyProfile>
               ))}
             </div>
           </div>
